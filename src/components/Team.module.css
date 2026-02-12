@@ -1,0 +1,169 @@
+.team {
+  background: var(--color-white);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.card {
+  background: var(--color-off-white);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageWrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform var(--transition-slow);
+}
+
+.card:hover .image {
+  transform: scale(1.03);
+}
+
+.content {
+  padding: 32px;
+  flex: 1;
+}
+
+.content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  color: var(--color-primary);
+}
+
+.oab {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-gold);
+  margin-bottom: 4px;
+}
+
+.role {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-gray-light);
+}
+
+.description p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.description p:last-child {
+  margin-bottom: 0;
+}
+
+/* Imagem da equipe */
+.teamImage {
+  margin-top: 50px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.teamPhoto {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.aiDisclaimer {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--color-white);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  backdrop-filter: blur(4px);
+}
+
+.aiDisclaimer svg {
+  color: var(--color-gold-light);
+}
+
+.whyUs {
+  margin-top: 60px;
+  padding: 40px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.whyUs h3 {
+  color: var(--color-gold-light);
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+}
+
+.whyUs p {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 900px;
+  margin: 0 auto 16px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.whyUs p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 968px) {
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding: 24px;
+  }
+
+  .whyUs {
+    padding: 30px 24px;
+  }
+
+  .whyUs h3 {
+    font-size: 1.5rem;
+  }
+
+  .aiDisclaimer {
+    position: static;
+    margin-top: 12px;
+    justify-content: center;
+    background: var(--color-gray-light);
+    color: var(--color-text-light);
+  }
+
+  .teamImage {
+    display: flex;
+    flex-direction: column;
+  }
+}

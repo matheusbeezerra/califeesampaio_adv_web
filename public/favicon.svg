@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ECD97B"/>
+      <stop offset="100%" style="stop-color:#A07820"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="12" fill="#2B3F59"/>
+  <g transform="translate(50, 50)">
+    <!-- Scale/Balance icon -->
+    <line x1="0" y1="-25" x2="0" y2="15" stroke="url(#goldGradient)" stroke-width="4" stroke-linecap="round"/>
+    <line x1="-25" y1="-15" x2="25" y2="-15" stroke="url(#goldGradient)" stroke-width="4" stroke-linecap="round"/>
+    <!-- Left plate -->
+    <line x1="-25" y1="-15" x2="-25" y2="0" stroke="url(#goldGradient)" stroke-width="3"/>
+    <path d="M-35,0 Q-25,8 -15,0" fill="none" stroke="url(#goldGradient)" stroke-width="3"/>
+    <!-- Right plate -->
+    <line x1="25" y1="-15" x2="25" y2="0" stroke="url(#goldGradient)" stroke-width="3"/>
+    <path d="M15,0 Q25,8 35,0" fill="none" stroke="url(#goldGradient)" stroke-width="3"/>
+    <!-- Base -->
+    <line x1="-12" y1="20" x2="12" y2="20" stroke="url(#goldGradient)" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>
