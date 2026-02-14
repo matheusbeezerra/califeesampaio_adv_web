@@ -5,7 +5,11 @@ import styles from './Contact.module.css';
 
 const viewportConfig = { once: false, amount: 0.2, margin: '-50px' };
 
-const Contact = () => {
+interface ContactProps {
+  onContactClick: (message?: string) => void;
+}
+
+const Contact = ({ onContactClick }: ContactProps) => {
 
   const [formData, setFormData] = useState({
     name: '',
@@ -24,8 +28,8 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const whatsappMessage = `Olá! Meu nome é ${formData.name}.%0A%0AAssunto: ${formData.subject}%0A%0A${formData.message}%0A%0AEmail: ${formData.email}%0ATelefone: ${formData.phone}`;
-    window.open(`https://wa.me/5581992634067?text=${whatsappMessage}`, '_blank');
+    const whatsappMessage = `Olá! Meu nome é ${formData.name}.\n\nAssunto: ${formData.subject}\n\n${formData.message}\n\nEmail: ${formData.email}\nTelefone: ${formData.phone}`;
+    onContactClick(whatsappMessage);
   };
 
   const offices = [

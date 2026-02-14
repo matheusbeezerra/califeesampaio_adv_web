@@ -101,6 +101,7 @@
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.8rem;
   z-index: 2;
+  pointer-events: none;
 }
 
 .mouse {
@@ -134,9 +135,19 @@
   }
 }
 
+@media (max-height: 750px) {
+  .scrollIndicator {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
+  .hero {
+    border-radius: 0 0 0 150px;
+  }
+
   .content {
-    padding: 100px 20px 60px;
+    padding: 100px 20px 100px;
   }
 
   .subtitle {

@@ -2,9 +2,11 @@ import { motion } from 'framer-motion';
 import { MessageCircle } from 'lucide-react';
 import styles from './Hero.module.css';
 
-const Hero = () => {
-  const whatsappLink = 'https://wa.me/5581992634067?text=Olá! Gostaria de saber mais sobre os serviços do escritório.';
+interface HeroProps {
+  onContactClick: (message?: string) => void;
+}
 
+const Hero = ({ onContactClick }: HeroProps) => {
   return (
     <section id="inicio" className={styles.hero}>
       <div className={styles.backgroundImage}>
@@ -53,10 +55,10 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1 }}
           >
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            <button onClick={() => onContactClick()} className="btn btn-primary">
               <MessageCircle size={20} />
               Fale Conosco
-            </a>
+            </button>
             <a href="#sobre" className="btn btn-secondary" style={{ borderColor: 'white', color: 'white' }}>
               Conheça o Escritório
             </a>

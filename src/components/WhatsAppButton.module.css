@@ -5,6 +5,7 @@
   width: 60px;
   height: 60px;
   background: #25D366;
+  border: none;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -12,6 +13,7 @@
   color: white;
   box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
   z-index: 999;
+  cursor: pointer;
   transition: box-shadow var(--transition-fast);
 }
 

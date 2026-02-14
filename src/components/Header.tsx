@@ -40,9 +40,9 @@ const Header = () => {
               <Phone size={14} />
               <span>(81) 3036-5193</span>
             </a>
-            <a href="mailto:cristianesampaio.dra@gmail.com" className={styles.topBarItem}>
+            <a href="mailto:contato@califeesampaioadvocacia.com" className={styles.topBarItem}>
               <Mail size={14} />
-              <span>cristianesampaio.dra@gmail.com</span>
+              <span>contato@califeesampaioadvocacia.com</span>
             </a>
           </div>
         </div>
